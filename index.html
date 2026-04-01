@@ -226,12 +226,26 @@
   <source src="nltv-music.mp3.mp3" type="audio/mpeg">
 </audio>
 
-<button
-  onclick="toggleMusic()"
-  class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-2xl bg-lime-400 text-black font-black shadow-[0_0_25px_rgba(163,230,53,0.35)] hover:scale-105 transition"
->
-  🎵
-</button>
+<div class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-black/70 border border-lime-400/20 px-4 py-3 rounded-2xl backdrop-blur">
+
+  <button
+    onclick="toggleMusic()"
+    class="text-lime-400 text-xl hover:scale-110 transition"
+  >
+    🎵
+  </button>
+
+  <input
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    value="0.5"
+    oninput="setVolume(this.value)"
+    class="w-24 accent-lime-400"
+  >
+
+</div>
 
 <script>
   const music = document.getElementById('bgMusic');
