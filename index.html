@@ -1,55 +1,183 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>NLTV</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLTV | NightLightTV</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(circle at top, rgba(163,230,53,0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(132,204,22,0.08), transparent 20%),
+        #050505;
+    }
+    .glow-text {
+      text-shadow: 0 0 10px rgba(163,230,53,0.35), 0 0 24px rgba(163,230,53,0.18);
+    }
+    .glow-box {
+      box-shadow: 0 0 0 1px rgba(163,230,53,0.12), 0 0 30px rgba(163,230,53,0.08);
+    }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(163,230,53,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(163,230,53,0.05) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+  </style>
 </head>
+<body class="text-white min-h-screen overflow-x-hidden">
+  <div class="fixed inset-0 grid-bg opacity-40 pointer-events-none"></div>
 
-<body class="bg-black text-white p-10">
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-black/60 border-b border-lime-400/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="text-2xl md:text-3xl font-black tracking-[0.25em] text-lime-400 glow-text">NLTV</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-300">
+        <a href="#home" class="hover:text-lime-400 transition">Ana Sayfa</a>
+        <a href="#live" class="hover:text-lime-400 transition">Canlı Yayın</a>
+        <a href="#about" class="hover:text-lime-400 transition">Hakkında</a>
+        <a href="#contact" class="hover:text-lime-400 transition">İletişim</a>
+      </nav>
+    </div>
+  </header>
 
-<h1 class="text-5xl font-black text-lime-400 mb-10">NLTV</h1>
+  <main>
+    <section id="home" class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-14">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-lime-400/20 bg-lime-400/5 text-lime-300 text-sm glow-box">
+            <span class="w-2.5 h-2.5 rounded-full bg-lime-400 animate-pulse"></span>
+            Dark Neon FPS Brand
+          </div>
 
-<!-- CANLI -->
-<section class="mb-16">
-<h2 class="text-3xl text-lime-400 mb-6">CANLI YAYIN</h2>
+          <h1 class="mt-7 text-5xl md:text-7xl font-black leading-[0.95] tracking-tight">
+            NIGHTLIGHTTV
+            <span class="block text-lime-400 glow-text">STREAM • CONTENT • COMMUNITY</span>
+          </h1>
 
-<div class="grid md:grid-cols-2 gap-6">
-<a href="https://kick.com/NightLightTV" target="_blank"
-class="p-6 border border-lime-400 rounded-xl hover:bg-lime-400/10">
-Kick → NightLightTV
-</a>
+          <p class="mt-6 max-w-2xl text-zinc-300 text-lg leading-8">
+            NLTV için karanlık neon stilinde hazırlanmış resmi web sayfası. Canlı yayın bağlantıları,
+            içerik kimliği ve iletişim alanı tek sayfada toplandı.
+          </p>
 
-<a href="https://youtube.com/@NightLightTVOfficial" target="_blank"
-class="p-6 border border-lime-400 rounded-xl hover:bg-lime-400/10">
-YouTube → @NightLightTVOfficial
-</a>
-</div>
-</section>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#live" class="px-6 py-3 rounded-2xl bg-lime-400 text-black font-bold shadow-[0_0_25px_rgba(163,230,53,0.35)] hover:scale-105 transition">
+              Canlı Yayına Git
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-2xl border border-lime-400/20 bg-zinc-950/70 text-lime-300 hover:bg-lime-400/10 transition">
+              İletişime Geç
+            </a>
+          </div>
+        </div>
 
-<!-- İLETİŞİM -->
-<section>
-<h2 class="text-3xl text-lime-400 mb-6">İLETİŞİM</h2>
+        <div class="relative">
+          <div class="absolute -inset-5 bg-lime-400/10 blur-3xl rounded-[2rem]"></div>
+          <div class="relative rounded-[2rem] border border-lime-400/15 bg-zinc-950/80 p-6 md:p-7 glow-box">
+            <div class="rounded-[1.5rem] border border-lime-400/10 bg-black/80 p-5">
+              <div class="flex items-center justify-between border-b border-lime-400/10 pb-4">
+                <div>
+                  <div class="text-zinc-500 text-sm">Official NLTV Panel</div>
+                  <div class="text-3xl font-black tracking-[0.2em] text-lime-400">NLTV</div>
+                </div>
+                <div class="flex gap-2">
+                  <span class="w-3 h-3 rounded-full bg-lime-400"></span>
+                  <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+                  <span class="w-3 h-3 rounded-full bg-zinc-700"></span>
+                </div>
+              </div>
 
-<div class="grid md:grid-cols-2 gap-10">
+              <div class="grid grid-cols-2 gap-4 mt-5">
+                <div class="min-h-[110px] rounded-2xl border border-lime-400/10 bg-zinc-900/60 p-4 flex items-end text-zinc-200">Yeni videolar</div>
+                <div class="min-h-[110px] rounded-2xl border border-lime-400/10 bg-zinc-900/60 p-4 flex items-end text-zinc-200">Canlı yayın erişimi</div>
+                <div class="min-h-[110px] rounded-2xl border border-lime-400/10 bg-zinc-900/60 p-4 flex items-end text-zinc-200">Topluluk bağlantıları</div>
+                <div class="min-h-[110px] rounded-2xl border border-lime-400/10 bg-zinc-900/60 p-4 flex items-end text-zinc-200">NLTV marka alanı</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="space-y-4">
-<input placeholder="Adın" class="w-full p-3 bg-black border border-lime-400 rounded">
-<input placeholder="Email" class="w-full p-3 bg-black border border-lime-400 rounded">
-<textarea placeholder="Mesajın" class="w-full p-3 bg-black border border-lime-400 rounded h-32"></textarea>
-<button class="w-full bg-lime-400 text-black py-3 rounded font-bold">GÖNDER</button>
-</div>
+    <section id="live" class="max-w-7xl mx-auto px-6 py-12">
+      <div class="rounded-[2rem] border border-lime-400/15 bg-zinc-950/80 p-7 md:p-8 glow-box">
+        <div class="text-sm tracking-[0.25em] font-bold text-lime-400">CANLI YAYIN</div>
+        <h2 class="mt-3 text-3xl md:text-4xl font-black">NLTV canlı yayın bağlantıları</h2>
+        <p class="mt-3 text-zinc-400 max-w-2xl">Kick ve YouTube sayfalarına tek tıkla git. Bu kutular daha sonra canlı durum göstergesiyle de güncellenebilir.</p>
 
-<div class="space-y-3 text-gray-300">
-<div>📩 contact@nltv.com</div>
-<div>🎮 Kick: NightLightTV</div>
-<div>▶ YouTube: NightLightTVOfficial</div>
-<div>💬 Discord: NLTV</div>
-</div>
+        <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <a href="https://kick.com/NightLightTV" target="_blank" rel="noreferrer" class="group rounded-[1.5rem] border border-lime-400/15 bg-black/60 p-6 hover:bg-lime-400/5 hover:-translate-y-1 transition glow-box">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-zinc-500 text-sm">Kick</div>
+                <div class="text-2xl font-black mt-2">NightLightTV</div>
+              </div>
+              <div class="text-lime-400 text-sm font-bold group-hover:translate-x-1 transition">CANLIYI AÇ →</div>
+            </div>
+          </a>
 
-</div>
-</section>
+          <a href="https://youtube.com/@NightLightTVOfficial" target="_blank" rel="noreferrer" class="group rounded-[1.5rem] border border-lime-400/15 bg-black/60 p-6 hover:bg-lime-400/5 hover:-translate-y-1 transition glow-box">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-zinc-500 text-sm">YouTube</div>
+                <div class="text-2xl font-black mt-2">@NightLightTVOfficial</div>
+              </div>
+              <div class="text-lime-400 text-sm font-bold group-hover:translate-x-1 transition">KANALA GİT →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section id="about" class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-1 rounded-[1.75rem] border border-lime-400/15 bg-zinc-950/80 p-6 glow-box">
+          <div class="text-sm tracking-[0.25em] font-bold text-lime-400">HAKKINDA</div>
+          <h2 class="mt-3 text-3xl font-black">NLTV kimliği</h2>
+          <p class="mt-4 text-zinc-400 leading-8">FPS içeriklerini, yayın enerjisini ve topluluk hissini tek marka altında toplayan karanlık neon bir görünüm.</p>
+        </div>
+
+        <div class="rounded-[1.75rem] border border-lime-400/15 bg-zinc-950/80 p-6 glow-box">
+          <div class="w-12 h-12 rounded-2xl border border-lime-400/15 bg-lime-400/5"></div>
+          <h3 class="mt-5 text-xl font-bold">FPS İçerik</h3>
+          <p class="mt-3 text-zinc-400 leading-7">PUBG, CS2 ve diğer FPS odaklı içerikler için keskin, modern bir sunum alanı.</p>
+        </div>
+
+        <div class="rounded-[1.75rem] border border-lime-400/15 bg-zinc-950/80 p-6 glow-box">
+          <div class="w-12 h-12 rounded-2xl border border-lime-400/15 bg-lime-400/5"></div>
+          <h3 class="mt-5 text-xl font-bold">Topluluk Erişimi</h3>
+          <p class="mt-3 text-zinc-400 leading-7">Sosyal medya, yayın ve ileride eklenecek Discord/topluluk alanları için temel merkez sayfa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-12 pb-20">
+      <div class="rounded-[2rem] border border-lime-400/15 bg-zinc-950/80 p-7 md:p-8 glow-box">
+        <div class="text-sm tracking-[0.25em] font-bold text-lime-400">İLETİŞİM</div>
+        <h2 class="mt-3 text-3xl md:text-4xl font-black">Benimle iletişime geç</h2>
+
+        <div class="grid lg:grid-cols-2 gap-8 mt-8">
+          <div class="space-y-4">
+            <input type="text" placeholder="Adın" class="w-full rounded-2xl bg-black/70 border border-lime-400/15 px-4 py-4 outline-none focus:border-lime-400 text-white placeholder:text-zinc-500" />
+            <input type="email" placeholder="Email" class="w-full rounded-2xl bg-black/70 border border-lime-400/15 px-4 py-4 outline-none focus:border-lime-400 text-white placeholder:text-zinc-500" />
+            <textarea placeholder="Mesajın" class="w-full h-40 rounded-2xl bg-black/70 border border-lime-400/15 px-4 py-4 outline-none focus:border-lime-400 text-white placeholder:text-zinc-500 resize-none"></textarea>
+            <button class="w-full rounded-2xl bg-lime-400 text-black font-black py-4 shadow-[0_0_25px_rgba(163,230,53,0.28)] hover:scale-[1.01] transition">MESAJ GÖNDER</button>
+          </div>
+
+          <div class="rounded-[1.5rem] border border-lime-400/15 bg-black/50 p-6 glow-box flex flex-col justify-center">
+            <div class="text-zinc-500 text-sm uppercase tracking-[0.25em]">İletişim Bilgileri</div>
+            <div class="mt-6 space-y-5 text-zinc-200 text-lg">
+              <div>📩 contact@nltv.com</div>
+              <div>🎮 Kick: NightLightTV</div>
+              <div>▶ YouTube: NightLightTVOfficial</div>
+              <div>💬 Discord: NLTV Community</div>
+            </div>
+            <p class="mt-8 text-zinc-500 leading-7">İstersen bu alanı daha sonra gerçek mail formu, Discord davet bağlantısı ve iş birliği bölümüyle genişletebiliriz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
+
