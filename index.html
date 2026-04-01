@@ -222,5 +222,27 @@
       </div>
     </section>
   </main>
+  <audio id="bgMusic" loop>
+  <source src="nltv-music.mp3" type="audio/mpeg">
+</audio>
+
+<button
+  onclick="toggleMusic()"
+  class="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-2xl bg-lime-400 text-black font-black shadow-[0_0_25px_rgba(163,230,53,0.35)] hover:scale-105 transition"
+>
+  🎵
+</button>
+
+<script>
+  const music = document.getElementById('bgMusic');
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  }
+</script>
 </body>
 </html>
