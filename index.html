@@ -274,6 +274,43 @@
 
   // başlangıç sesi
   music.volume = 0.5;
+  <script>
+  const music = document.getElementById('bgMusic');
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  }
+
+  function setVolume(value) {
+    music.volume = value;
+  }
+
+  music.volume = 0.5;
+
+  let isLive = true;
+
+  function toggleLiveStatus() {
+    const badge = document.getElementById('liveBadge');
+    const dot = document.getElementById('liveDot');
+    const text = document.getElementById('liveText');
+
+    isLive = !isLive;
+
+    if (isLive) {
+      badge.className = "inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 text-emerald-300 text-sm glow-box shadow-[0_0_20px_rgba(52,211,153,0.22)] transition duration-300";
+      dot.className = "w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse";
+      text.textContent = "LIVE NOW • NLTV";
+    } else {
+      badge.className = "inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-400/20 bg-red-400/10 text-red-300 text-sm glow-box shadow-[0_0_20px_rgba(248,113,113,0.20)] transition duration-300";
+      dot.className = "w-2.5 h-2.5 rounded-full bg-red-400";
+      text.textContent = "OFFLINE • NLTV";
+    }
+  }
+</script>
 </script>
 </body>
 </html>
