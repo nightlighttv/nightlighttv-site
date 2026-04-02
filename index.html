@@ -253,6 +253,8 @@
   const music = document.getElementById('bgMusic');
 
   function toggleMusic() {
+    if (!music) return;
+
     if (music.paused) {
       music.play();
     } else {
@@ -261,28 +263,13 @@
   }
 
   function setVolume(value) {
+    if (!music) return;
     music.volume = value;
   }
 
-  // başlangıç sesi
-  music.volume = 0.5;
-  <script>
-  <script>
-  const music = document.getElementById('bgMusic');
-
-  function toggleMusic() {
-    if (music.paused) {
-      music.play();
-    } else {
-      music.pause();
-    }
+  if (music) {
+    music.volume = 0.5;
   }
-
-  function setVolume(value) {
-    music.volume = value;
-  }
-
-  music.volume = 0.5;
 
   let isLive = true;
 
@@ -291,10 +278,7 @@
     const dot = document.getElementById('liveDot');
     const text = document.getElementById('liveText');
 
-    if (!badge || !dot || !text) {
-      alert('Live alanı bulunamadı');
-      return;
-    }
+    if (!badge || !dot || !text) return;
 
     isLive = !isLive;
 
