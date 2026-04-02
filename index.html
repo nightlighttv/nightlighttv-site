@@ -48,17 +48,21 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
       <div class="flex flex-wrap items-center gap-3">
+<div class="flex flex-wrap items-center gap-3">
   <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-lime-400/20 bg-lime-400/5 text-lime-300 text-sm glow-box">
     <span class="w-2.5 h-2.5 rounded-full bg-lime-400 animate-pulse"></span>
     FPS HIGHLIGHT HUB
   </div>
 
-  <div
-    id="liveBadge"
-    class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 text-emerald-300 text-sm glow-box shadow-[0_0_20px_rgba(52,211,153,0.22)] transition duration-300"
-  >
+  <div id="liveBadge" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 text-emerald-300 text-sm glow-box shadow-[0_0_20px_rgba(52,211,153,0.22)] transition duration-300">
     <span id="liveDot" class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
     <span id="liveText">LIVE NOW • NLTV</span>
+  </div>
+
+  <button onclick="toggleLiveStatus()" class="px-4 py-2 rounded-full border border-lime-400/20 bg-black/50 text-lime-300 text-sm hover:bg-lime-400/10 hover:-translate-y-1 transition duration-300">
+    Durumu Değiştir
+  </button>
+</div>
   </div>
 
   <button
