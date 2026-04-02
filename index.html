@@ -341,5 +341,51 @@
     }
   }
 </script>
+  <script>
+const supabase = window.supabase.createClient(
+  "https://zcuwmqnkzdvjrmqqhej.supabase.co",
+  "BURAYA_PUBLISHABLE_KEY"
+);
+
+async function register() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { error } = await supabase.auth.signUp({
+    email,
+    password
+  });
+
+  alert(error ? error.message : "Kayıt başarılı!");
+}
+
+async function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { error } = await supabase.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  alert(error ? error.message : "Giriş başarılı!");
+  getUser();
+}
+
+async function logout() {
+  await supabase.auth.signOut();
+  document.getElementById("userInfo").innerText = "";
+}
+
+async function getUser() {
+  const { data } = await supabase.auth.getUser();
+  if (data.user) {
+    document.getElementById("userInfo").innerText =
+      "Giriş yapıldı: " + data.user.email;
+  }
+}
+
+getUser();
+</script>
 </body>
 </html>
