@@ -342,9 +342,10 @@
   }
 </script>
   <script>
+<script>
 const supabaseClient = supabase.createClient(
   "https://zcuwmqnkzdvjrmqqhej.supabase.co",
-  "sb_publishable_1Z5TRIfL4JudNTcXpv7hCg_hJ7NyLVM"
+  "BURAYA_PUBLISHABLE_KEY"
 );
 
 async function register() {
@@ -373,7 +374,7 @@ async function login() {
 }
 
 async function logout() {
-  await supabase.auth.signOut();
+  await supabaseClient.auth.signOut();
   document.getElementById("userInfo").innerText = "";
 }
 
@@ -386,6 +387,7 @@ async function getUser() {
 }
 
 getUser();
+</script>
 </script>
 </body>
 </html>
